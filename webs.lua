@@ -4,7 +4,7 @@ local web_list = {
 	{"blackweb", "Web", "blackweb",},
 }
 
-for i in ipairs(web_list) do
+for i in pairs(web_list) do
 	local name = web_list[i][1]
 	local description = web_list[i][2]
 	local image = web_list[i][3]

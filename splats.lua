@@ -3,9 +3,11 @@
 local splat_list = {
 	{"redsplat", "Red Splat", "redsplat",},
 	{"greensplat", "Slime Splat", "greensplat",},
+	{"reddrips", "Red Drips", "reddrips",},	
+	{"greendrips", "Green Drips", "greendrips",},	
 }
 
-for i in ipairs(splat_list) do
+for i in pairs(splat_list) do
 	local name = splat_list[i][1]
 	local description = splat_list[i][2]
 	local image = splat_list[i][3]
