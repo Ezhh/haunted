@@ -1,0 +1,8 @@
+
+Textures for this mod:
+License: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+Attribution: Shara RedCat
+
+Code for this mod:
+License: MIT (https://opensource.org/licenses/MIT)
+By Shara RedCat
