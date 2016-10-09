@@ -16,6 +16,8 @@ for i in pairs(splat_list) do
 		description = description,
 		drawtype = "signlike",
 		tiles = {"haunted_"..image..".png"},
+		inventory_image = "haunted_"..image..".png",
+		wield_image = "haunted_"..image..".png",
 		paramtype = "light",
 		paramtype2 = "wallmounted",
 		sunlight_propagates = true,
