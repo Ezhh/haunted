@@ -28,6 +28,3 @@ for i in pairs(splat_list) do
 	})
 end
 
-
-
-
