@@ -1,4 +1,5 @@
 
+--ooze brick
 minetest.register_node("haunted:ooze_brick", {
 	description = "Ooze Brick",
 	tiles = { 
@@ -24,3 +25,99 @@ minetest.register_node("haunted:ooze_brick", {
 	drop = "default:stonebrick",
 })
 
+
+
+--liquid ooze
+minetest.register_node("haunted:ooze_source", {
+	description = "Lava Source",
+	drawtype = "liquid",
+	tiles = {
+		{
+			name = "default_water_source_animated.png^[colorize:#00FF00:122",
+			animation = {
+				type = "vertical_frames",
+				aspect_w = 16,
+				aspect_h = 16,
+				length = 3.0,
+			},
+		},
+	},
+	special_tiles = {
+		{
+			name = "default_water_source_animated.png^[colorize:#00FF00:122",
+			animation = {
+				type = "vertical_frames",
+				aspect_w = 16,
+				aspect_h = 16,
+				length = 3.0,
+			},
+			backface_culling = false,
+		},
+	},
+	alpha = 160,
+	paramtype = "light",
+	light_source = default.LIGHT_MAX - 1,
+	walkable = false,
+	pointable = false,
+	diggable = false,
+	buildable_to = true,
+	is_ground_content = false,
+	drop = "",
+	drowning = 1,
+	liquidtype = "source",
+	liquid_alternative_flowing = "haunted:ooze_flowing",
+	liquid_alternative_source = "haunted:ooze_source",
+	liquid_viscosity = 7,
+	liquid_renewable = false,
+	damage_per_second = 4 * 2,
+	post_effect_color = {a = 191, r = 255, g = 64, b = 0},
+	groups = {lava = 3, liquid = 2, hot = 3, igniter = 1},
+})
+
+minetest.register_node("haunted:ooze_flowing", {
+	description = "Flowing Lava",
+	drawtype = "flowingliquid",
+	tiles = {"default_water.png^[colorize:#00FF00:122"},
+	special_tiles = {
+		{
+			name = "default_water_flowing_animated.png^[colorize:#00FF00:122",
+			backface_culling = false,
+			animation = {
+				type = "vertical_frames",
+				aspect_w = 16,
+				aspect_h = 16,
+				length = 3.3,
+			},
+		},
+		{
+			name = "default_water_flowing_animated.png^[colorize:#00FF00:122",
+			backface_culling = true,
+			animation = {
+				type = "vertical_frames",
+				aspect_w = 16,
+				aspect_h = 16,
+				length = 3.3,
+			},
+		},
+	},
+	alpha = 160,
+	paramtype = "light",
+	paramtype2 = "flowingliquid",
+	light_source = default.LIGHT_MAX - 1,
+	walkable = false,
+	pointable = false,
+	diggable = false,
+	buildable_to = true,
+	is_ground_content = false,
+	drop = "",
+	drowning = 1,
+	liquidtype = "flowing",
+	liquid_alternative_flowing = "haunted:ooze_flowing",
+	liquid_alternative_source = "haunted:ooze_source",
+	liquid_viscosity = 7,
+	liquid_renewable = false,
+	damage_per_second = 4 * 2,
+	post_effect_color = {a = 191, r = 255, g = 64, b = 0},
+	groups = {lava = 3, liquid = 2, hot = 3, igniter = 1,
+		not_in_creative_inventory = 1},
+})
