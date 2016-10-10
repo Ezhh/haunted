@@ -1,5 +1,4 @@
 
-
 local splat_list = {
 	{"redsplat", "Red Splat", "redsplat",},
 	{"greensplat", "Slime Splat", "greensplat",},

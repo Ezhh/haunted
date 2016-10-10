@@ -1,5 +1,5 @@
 
-All original textures for this mod:
+All textures for this mod, unless mentioned below:
 License: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
 Attribution: Shara RedCat
 
@@ -8,5 +8,10 @@ License: MIT (https://opensource.org/licenses/MIT)
 By Shara RedCat
 
 --
+
+Ooze animation:
+License: CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0/)
+Attribution: PsychoVision 
+(Using Paramat's stone_brick texture as background)
 
 Grass textures are recoloured from default mod in minetest_game (WTFPL). 
