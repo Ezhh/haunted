@@ -29,11 +29,11 @@ minetest.register_node("haunted:ooze_brick", {
 
 --liquid ooze
 minetest.register_node("haunted:ooze_source", {
-	description = "Lava Source",
+	description = "Ooze Source",
 	drawtype = "liquid",
 	tiles = {
 		{
-			name = "default_water_source_animated.png^[colorize:#00FF00:122",
+			name = "default_water_source_animated.png^[colorize:#80FF00:122",
 			animation = {
 				type = "vertical_frames",
 				aspect_w = 16,
@@ -44,7 +44,7 @@ minetest.register_node("haunted:ooze_source", {
 	},
 	special_tiles = {
 		{
-			name = "default_water_source_animated.png^[colorize:#00FF00:122",
+			name = "default_water_source_animated.png^[colorize:#80FF00:122",
 			animation = {
 				type = "vertical_frames",
 				aspect_w = 16,
@@ -56,7 +56,7 @@ minetest.register_node("haunted:ooze_source", {
 	},
 	alpha = 160,
 	paramtype = "light",
-	light_source = default.LIGHT_MAX - 1,
+	light_source = default.LIGHT_MAX - 8,
 	walkable = false,
 	pointable = false,
 	diggable = false,
@@ -70,17 +70,17 @@ minetest.register_node("haunted:ooze_source", {
 	liquid_viscosity = 7,
 	liquid_renewable = false,
 	damage_per_second = 4 * 2,
-	post_effect_color = {a = 191, r = 255, g = 64, b = 0},
-	groups = {lava = 3, liquid = 2, hot = 3, igniter = 1},
+	post_effect_color = {a = 50, r = 128, g = 225, b = 0},
+	groups = {lava = 3, liquid = 2},
 })
 
 minetest.register_node("haunted:ooze_flowing", {
-	description = "Flowing Lava",
+	description = "Flowing Ooze",
 	drawtype = "flowingliquid",
-	tiles = {"default_water.png^[colorize:#00FF00:122"},
+	tiles = {"default_water.png^[colorize:#80FF00:122"},
 	special_tiles = {
 		{
-			name = "default_water_flowing_animated.png^[colorize:#00FF00:122",
+			name = "default_water_flowing_animated.png^[colorize:#80FF00:122",
 			backface_culling = false,
 			animation = {
 				type = "vertical_frames",
@@ -90,7 +90,7 @@ minetest.register_node("haunted:ooze_flowing", {
 			},
 		},
 		{
-			name = "default_water_flowing_animated.png^[colorize:#00FF00:122",
+			name = "default_water_flowing_animated.png^[colorize:#80FF00:122",
 			backface_culling = true,
 			animation = {
 				type = "vertical_frames",
@@ -103,7 +103,7 @@ minetest.register_node("haunted:ooze_flowing", {
 	alpha = 160,
 	paramtype = "light",
 	paramtype2 = "flowingliquid",
-	light_source = default.LIGHT_MAX - 1,
+	light_source = default.LIGHT_MAX - 8,
 	walkable = false,
 	pointable = false,
 	diggable = false,
@@ -117,7 +117,6 @@ minetest.register_node("haunted:ooze_flowing", {
 	liquid_viscosity = 7,
 	liquid_renewable = false,
 	damage_per_second = 4 * 2,
-	post_effect_color = {a = 191, r = 255, g = 64, b = 0},
-	groups = {lava = 3, liquid = 2, hot = 3, igniter = 1,
-		not_in_creative_inventory = 1},
+	post_effect_color = {a = 50, r = 128, g = 225, b = 0},
+	groups = {lava = 3, liquid = 2,	not_in_creative_inventory = 1},
 })
