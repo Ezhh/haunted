@@ -15,3 +15,4 @@ Attribution: PsychoVision
 (Using Paramat's stone_brick texture as background)
 
 Grass textures are recoloured from default mod in minetest_game (WTFPL). 
+Flowers and apple textures are recolours from default and flowers mods in minetest_game.
